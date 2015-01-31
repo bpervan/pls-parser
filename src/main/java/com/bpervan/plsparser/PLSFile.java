@@ -1,6 +1,7 @@
 package com.bpervan.plsparser;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,7 +17,9 @@ public class PLSFile implements Iterable<PLSEntry>{
 
     private File inputFile;
 
-    private PLSFile(){}
+    private PLSFile(){
+        entries = new ArrayList<PLSEntry>();
+    }
 
     public int getNumberOfEntries(){return this.numberOfEntries;}
     public int getVersion(){return this.version;}
